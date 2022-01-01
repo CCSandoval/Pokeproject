@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { getPokemon } from "../../utils/pokemons/pokemons";
+import Pokeball from "../../images/pokeball64.svg";
+
 const PokemonCard = ({ pokemon }) => {
   const [pokemonData, setPokemonData] = useState({});
   const [loading, setLoading] = useState(true);
@@ -8,7 +10,9 @@ const PokemonCard = ({ pokemon }) => {
     getPokemon(
       (res) => {
         setPokemonData(res.data);
-        setLoading(false);
+        setTimeout(() => {
+          setLoading(false);
+        }, 1000);
       },
       (err) => {
         console.log("err", err);
@@ -17,14 +21,24 @@ const PokemonCard = ({ pokemon }) => {
     );
   }, []);
 
-  if (loading) {
-    return <div>Loading...</div>;
-  }
-
   return (
-    <div>
-      <img src={pokemonData.sprites.front_default} alt="pokemon_image" />
-      <h1>{pokemon.name}</h1>
+    <div className="fadeIn w-full h-32 flex flex-col items-center justify-between rounded-lg outline outline-2 hover:outline-4 outline-pokemon-blue-d">
+      {loading ? (
+        <img
+          src={Pokeball}
+          alt="loading"
+          className="w-16 my-auto loadingAnimation"
+        />
+      ) : (
+        <img
+          src={pokemonData.sprites.front_default}
+          alt={pokemon.name}
+          className="h-full my-auto swirlInFwd"
+        />
+      )}
+      <h1 className="bg-pokemon-blue-d p-1 w-full text-center text-lg text-white rounded-b-lg">
+        {`${pokemon.name.charAt(0).toUpperCase()}${pokemon.name.slice(1)}`}
+      </h1>
     </div>
   );
 };

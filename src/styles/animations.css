@@ -1,23 +1,3 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-.navbarLink {
-    @apply text-xl text-white font-extrabold p-2 px-4 rounded-xl
-}
-
-.mobileMenuLink {
-    @apply text-lg font-bold rounded-xl
-}
-
-.navbarLink:hover {
-    @apply duration-200 scale-110 bg-pokemon-red-d
-}
-
-.mobileDeployed {
-    @apply flex flex-col
-}
-
 .scaleInRight {
     -webkit-animation: scale-in-hor-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
     animation: scale-in-hor-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
@@ -26,6 +6,21 @@
 .scaleOutRight {
     -webkit-animation: scale-out-hor-right 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
     animation: scale-out-hor-right 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+
+.loadingAnimation {
+    -webkit-animation: rotate-center 1s linear infinite;
+    animation: rotate-center 1s linear infinite;
+}
+
+.fadeIn {
+    -webkit-animation: fade-in 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    animation: fade-in 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+.swirlInFwd {
+    -webkit-animation: swirl-in-fwd 0.5s ease-out both;
+    animation: swirl-in-fwd 0.5s ease-out both;
 }
 
 @-webkit-keyframes scale-in-hor-right {
@@ -96,6 +91,78 @@
         transform: scaleX(0);
         -webkit-transform-origin: 100% 100%;
         transform-origin: 100% 100%;
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes rotate-center {
+    0% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotate-center {
+    0% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes swirl-in-fwd {
+    0% {
+        -webkit-transform: rotate(-540deg) scale(0);
+        transform: rotate(-540deg) scale(0);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: rotate(0) scale(1);
+        transform: rotate(0) scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes swirl-in-fwd {
+    0% {
+        -webkit-transform: rotate(-540deg) scale(0);
+        transform: rotate(-540deg) scale(0);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: rotate(0) scale(1);
+        transform: rotate(0) scale(1);
         opacity: 1;
     }
 }

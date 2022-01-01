@@ -3,6 +3,8 @@ import Pokedexes from "./pages/pokedexes/Index";
 import Pokemons from "./pages/pokemons/Index";
 import Index from "./pages/Index";
 import NormalLayout from "./layouts/NormalLayout";
+import "./styles/index.css";
+import "./styles/animations.css";
 
 function App() {
   return (

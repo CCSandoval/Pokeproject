@@ -1,18 +1,14 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
-import Footer from "../components/layout/Footer";
-import MobileMenu from "../components/layout/MobileMenu";
 import Navbar from "../components/layout/Navbar";
 
 const NormalLayout = () => {
   return (
-    <div className="overflow-hidden">
-      <MobileMenu />
+    <div>
       <Navbar />
-      <div className="flex">
+      <div className="flex h-full">
         <Outlet />
       </div>
-      <Footer />
     </div>
   );
 };

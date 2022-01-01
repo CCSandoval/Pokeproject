@@ -4,7 +4,7 @@ import Pokeball from "../../images/pokeball.svg";
 
 const Navbar = () => {
   return (
-    <nav className="hidden sm:flex p-1 bg-pokemon-red">
+    <nav className="flex p-1 bg-pokemon-red">
       <Link to="/">
         <img className="w-16" src={Pokeball} alt="pokeball" />
       </Link>

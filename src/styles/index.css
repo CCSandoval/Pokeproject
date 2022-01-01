@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.navbarLink {
+    @apply text-xl text-white font-extrabold p-2 px-4 rounded-xl
+}
+
+.navbarLink:hover {
+    @apply duration-200 scale-110 bg-pokemon-red-d
+}
+
+.mobileDeployed {
+    @apply flex flex-col
+}
