@@ -20,6 +20,21 @@ module.exports = {
       "pokemon-red": "#FB1B1B",
       "pokemon-red-d": "#D41717",
     },
+    fontFamily: {
+      sans: ["ui-sans-serif", "system-ui"],
+      serif: ["ui-serif", "Georgia"],
+      mono: ["ui-monospace", "SFMono-Regular"],
+      pokemon: ['"Pokemon Solid"', "ui-sans-serif"],
+    },
+    letterSpacing: {
+      tightest: "-.075em",
+      tighter: "-.05em",
+      tight: "-.025em",
+      normal: "0",
+      wide: ".025em",
+      wider: ".15em",
+      widest: ".2em",
+    },
   },
   plugins: [],
 };

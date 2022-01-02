@@ -13,9 +13,12 @@ const Navbar = () => {
           <Link to="/pokedexes">Pokédexes</Link>
         </li>
         <li className="navbarLink">
-          <Link to="/pokemons">Pokémones</Link>
+          <Link to="/pokemons">Pokémons</Link>
         </li>
       </ul>
+      <Link to="/">
+        <img className="w-16" src={Pokeball} alt="pokeball" />
+      </Link>
     </nav>
   );
 };

@@ -5,7 +5,7 @@ export const getPokemons = async (url, success, error) => {
     method: "GET",
     url: url,
   };
-  axios.request(options).then(success).catch(error);
+  await axios.request(options).then(success).catch(error);
 };
 
 export const getPokemon = async (success, error, url) => {
@@ -13,5 +13,5 @@ export const getPokemon = async (success, error, url) => {
     method: "GET",
     url: url,
   };
-  axios.request(options).then(success).catch(error);
+  await axios.request(options).then(success).catch(error);
 };

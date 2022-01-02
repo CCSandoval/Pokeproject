@@ -1,10 +1,12 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Pokedexes from "./pages/pokedexes/Index";
-import Pokemons from "./pages/pokemons/Index";
+import Pokedexes from "./pages/pokedexes/Pokedexes";
+import Pokemons from "./pages/pokemons/Pokemons";
+import Pokedex from "./pages/pokedexes/Pokedex";
 import Index from "./pages/Index";
 import NormalLayout from "./layouts/NormalLayout";
 import "./styles/index.css";
 import "./styles/animations.css";
+import Pokemon from "./pages/pokemons/Pokemon";
 
 function App() {
   return (
@@ -13,7 +15,9 @@ function App() {
         <Route path="/" element={<NormalLayout />}>
           <Route path="" element={<Index />} />
           <Route path="pokedexes" element={<Pokedexes />} />
+          <Route path="pokedexes/:id" element={<Pokedex />} />
           <Route path="pokemons" element={<Pokemons />} />
+          <Route path="pokemons/:name" element={<Pokemon />} />
         </Route>
       </Routes>
     </BrowserRouter>

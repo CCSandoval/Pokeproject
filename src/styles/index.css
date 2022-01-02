@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .navbarLink {
-    @apply text-xl text-white font-extrabold p-2 px-4 rounded-xl
+    @apply text-3xl tracking-wider text-white p-2 px-4 rounded-xl font-pokemon
 }
 
 .navbarLink:hover {
