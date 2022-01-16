@@ -2,7 +2,11 @@ const colors = require("tailwindcss/colors");
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      boxShadow: {
+        spread: "0 0 4px 0px rgba(0,0,0,0)",
+      },
+    },
     colors: {
       transparent: "transparent",
       current: "currentColor",
@@ -13,12 +17,30 @@ module.exports = {
       indigo: colors.indigo,
       yellow: colors.yellow,
       red: colors.red,
+      slate: colors.slate,
+      zinc: colors.zinc,
+      neutral: colors.neutral,
+      stone: colors.stone,
+      orange: colors.orange,
+      amber: colors.amber,
+      lime: colors.lime,
+      green: colors.green,
+      teal: colors.teal,
+      cyan: colors.cyan,
+      sky: colors.sky,
+      blue: colors.blue,
+      violet: colors.violet,
+      purple: colors.purple,
+      fuchsia: colors.fuchsia,
+      pink: colors.pink,
+      rose: colors.rose,
       "pokemon-yellow": "#FFCC00",
       "pokemon-orange": "#D5A100",
       "pokemon-blue": "#0075BE",
       "pokemon-blue-d": "#0A285F",
       "pokemon-red": "#FB1B1B",
       "pokemon-red-d": "#D41717",
+      bg: "#001220",
     },
     fontFamily: {
       sans: ["ui-sans-serif", "system-ui"],

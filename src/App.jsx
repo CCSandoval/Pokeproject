@@ -13,12 +13,12 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<NormalLayout />}>
-          <Route path="" element={<Index />} />
           <Route path="pokedexes" element={<Pokedexes />} />
           <Route path="pokedexes/:id" element={<Pokedex />} />
           <Route path="pokemons" element={<Pokemons />} />
           <Route path="pokemons/:name" element={<Pokemon />} />
         </Route>
+        <Route path="/" element={<Index />} index={true} />
       </Routes>
     </BrowserRouter>
   );

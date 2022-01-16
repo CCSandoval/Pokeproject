@@ -62,7 +62,7 @@ const Index = () => {
 
   if (loading) {
     return (
-      <div className="w-3/4 mt-8 m-auto flex flex-col items-center justify-center">
+      <div className="w-3/4 h-full mt-8 m-auto flex flex-col items-center justify-center">
         <img src={Pokeball} alt="loading" className="w-64 loadingAnimation" />
       </div>
     );
@@ -74,15 +74,25 @@ const Index = () => {
 
   return (
     <div className="w-3/4 mb-8 sm:my-4 m-auto flex flex-col items-center justify-center">
-      <div className="w-full flex justify-around text-center text-xl mb-3">
-        {previousPage && (
-          <button className="w-full" onClick={() => loadPreviousPage()}>
+      <div className="w-full flex justify-evenly text-center text-xl mb-3">
+        {previousPage ? (
+          <button
+            className="w-full p-2 rounded-lg  font-pokemon tracking-wider text-xl duration-300 hover:shadow-gray-300 shadow-spread hover:scale-105"
+            onClick={() => loadPreviousPage()}
+          >
             Previous Page
           </button>
+        ) : (
+          <div className="w-full"></div>
         )}
-        <p className="w-full">Page: {page}</p>
+        <p className="w-full p-2 rounded-lg  font-pokemon tracking-wider text-xl">
+          Page: {page}
+        </p>
         {nextPage && (
-          <button className="w-full" onClick={() => loadNextPage()}>
+          <button
+            className="w-full p-2 rounded-lg  font-pokemon tracking-wider text-xl duration-300 hover:shadow-gray-300 shadow-spread hover:scale-105"
+            onClick={() => loadNextPage()}
+          >
             Next Page
           </button>
         )}
@@ -92,15 +102,25 @@ const Index = () => {
           return <PokemonCard key={nanoid()} pokemon={pokemon} />;
         })}
       </div>
-      <div className="w-full flex justify-around text-center text-xl mt-3">
-        {previousPage && (
-          <button className="w-full" onClick={() => loadPreviousPage()}>
+      <div className="w-full flex justify-evenly text-center text-xl mt-3">
+        {previousPage ? (
+          <button
+            className="w-full p-2 rounded-lg  font-pokemon tracking-wider text-xl duration-300 hover:shadow-gray-300 shadow-spread hover:scale-105"
+            onClick={() => loadPreviousPage()}
+          >
             Previous Page
           </button>
+        ) : (
+          <div className="w-full"></div>
         )}
-        <p className="w-full">Page: {page}</p>
+        <p className="w-full p-2 rounded-lg  font-pokemon tracking-wider text-xl">
+          Page: {page}
+        </p>
         {nextPage && (
-          <button className="w-full" onClick={() => loadNextPage()}>
+          <button
+            className="w-full p-2 rounded-lg  font-pokemon tracking-wider text-xl duration-300 hover:shadow-gray-300 shadow-spread hover:scale-105"
+            onClick={() => loadNextPage()}
+          >
             Next Page
           </button>
         )}

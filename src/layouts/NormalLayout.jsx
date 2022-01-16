@@ -4,7 +4,7 @@ import Navbar from "../components/layout/Navbar";
 
 const NormalLayout = () => {
   return (
-    <div>
+    <div className="h-full flex flex-col overflow-hidden">
       <Navbar />
       <div className="flex h-full">
         <Outlet />

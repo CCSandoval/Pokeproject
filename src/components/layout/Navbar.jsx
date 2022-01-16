@@ -10,10 +10,10 @@ const Navbar = () => {
       </Link>
       <ul className="w-full flex justify-evenly items-center">
         <li className="navbarLink">
-          <Link to="/pokedexes">Pokédexes</Link>
+          <Link to="/pokemons">Pokémons</Link>
         </li>
         <li className="navbarLink">
-          <Link to="/pokemons">Pokémons</Link>
+          <Link to="/pokedexes">Pokédexes</Link>
         </li>
       </ul>
       <Link to="/">
